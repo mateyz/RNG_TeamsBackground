@@ -12,9 +12,8 @@ def get_random_image(src):
 def is_daytime():
     time = datetime.now()
     hour = time.hour
-    if hour < 15:
-        return True
-    return False
+    return hour < 15
+    
 
 # Find a way to effectively run this function on startup of the Laptop, or per-day.
 if __name__ == "__main__":
@@ -26,4 +25,3 @@ if __name__ == "__main__":
 
     # Get the time of day, and determine whether or not the night varient should be used.
     daytime = is_daytime()
-    print("Is day ", daytime)
