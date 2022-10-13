@@ -8,12 +8,11 @@ from datetime import date, datetime
 def get_random_image(src):
     filename = random.choice(dircache.listdir(src))
     path = os.path.join(src, filename)
-    thumbPath = os.path.join(src + "../ImagesThumbnail", filename)
+    
+    # Initially a dictionary as we needed a thumbnail as well as an original Image. 
     Dict = {
         "Image" : path,
-        "Thumbnail" : thumbPath
     }
-
     return Dict
 
 def is_daytime():
@@ -27,13 +26,18 @@ def strip_image_name(image):
 
 # Find a way to effectively run this function on startup of the Laptop, or per-day.
 if __name__ == "__main__":
-    src = "./Images"
-    dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
-    dailyImage = get_random_image(src)
-    print("Currently grinding in ... ", dailyImage["Image"])
-
     # Get the time of day, and determine whether or not the night varient should be used.
     daytime = is_daytime()
+
+    if daytime:
+        src = "./Images"
+    else:
+        src = "./ImagesNight"
+
+    dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
+
+    dailyImage = get_random_image(src)
+    print("Currently grinding in ... ", dailyImage["Image"])
 
     # Check if we already have a Default Image. 
     path = exists(dst + "/Default.jpg")
@@ -45,6 +49,4 @@ if __name__ == "__main__":
     # Copy over the new background files.
     shutil.copyfile(dailyImage["Image"], dst + "/Default.jpg")
     
-    
-    # shutil.copyfile(dailyImage["Thumbnail"], dst)
     
