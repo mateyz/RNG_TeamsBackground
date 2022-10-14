@@ -18,7 +18,7 @@ def get_random_image(src):
 def is_daytime():
     time = datetime.now()
     hour = time.hour
-    return hour < 15
+    return hour < 18
     
 
 def strip_image_name(image):
