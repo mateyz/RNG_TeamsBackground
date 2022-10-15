@@ -33,7 +33,7 @@ def strip_image_name(image):
 if __name__ == "__main__":
     # Get the time of day, and determine whether or not the night varient should be used.
     daytime = is_daytime()
-
+    
     if daytime:
         src = "./Images"
     else:
@@ -54,7 +54,6 @@ if __name__ == "__main__":
     if path:
         print("File exists!")
         os.remove(dst + "/Default.jpg")
-    #    os.remove(dst + "/Default_thumb.jpg")
 
     # Copy over the new background files.
     shutil.copyfile(dailyImage["Image"], dst + "/Default.jpg")
