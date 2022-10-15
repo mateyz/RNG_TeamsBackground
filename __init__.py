@@ -39,7 +39,12 @@ if __name__ == "__main__":
     dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
 
     dailyImage = get_random_image(src)
-    print("Currently grinding in ... ", dailyImage["Image"])
+    
+    file_object = open('Logs.txt', 'a')
+    file_object.write('Currently grinding in ... ' + dailyImage["Image"])
+
+    # Close the file
+    file_object.close()
 
     # Check if we already have a Default Image. 
     path = exists(dst + "/Default.jpg")
