@@ -21,7 +21,10 @@ def is_daytime():
     time = datetime.now()
     hour = time.hour
     return hour < 14
-    
+
+def get_significant_event():
+    #Search for events (Birthdays, Holidays) and provide cool pictures for them! 
+    return False
 
 def strip_image_name(image):
     return False
@@ -41,7 +44,7 @@ if __name__ == "__main__":
     dailyImage = get_random_image(src)
     
     file_object = open('Logs.txt', 'a')
-    file_object.write('Currently grinding in ... ' + dailyImage["Image"])
+    file_object.write('\nCurrently grinding in ... ' + dailyImage["Image"])
 
     # Close the file
     file_object.close()
