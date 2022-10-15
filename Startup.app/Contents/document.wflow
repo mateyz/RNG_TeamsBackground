@@ -67,7 +67,7 @@ python __init__.py
 
 if [ $(date +%H) -lt "15" ];
 then
-    while [ $(date +%H:%M) != "15:01 ]; do sleep 1; done
+    while [ $(date +%H:%M) != "15:01" ]; do sleep 1; done
 	osascript -e 'tell app "Microsoft Teams" to display dialog "Teams Photo has been changed to night!"'
 	python __init__.py
 fi
@@ -185,7 +185,7 @@ fi
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>529.000000:449.000000</string>
+				<string>529.000000:543.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
