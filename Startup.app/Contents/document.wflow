@@ -63,7 +63,10 @@
 cd Documents
 cd GitHub
 cd RNG_TeamsBackground
-python __init__.py</string>
+python __init__.py
+
+while [ $(date +%H:%M) != "13:35" ]; do sleep 1; done
+osascript -e 'tell app "Microsoft Teams" to display dialog "Teams Photo has been changed to night!"'</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -173,8 +176,6 @@ python __init__.py</string>
 						<string>4</string>
 					</dict>
 				</dict>
-				<key>conversionLabel</key>
-				<integer>0</integer>
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
