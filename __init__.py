@@ -60,7 +60,7 @@ if __name__ == "__main__":
     # Copy over the new background files.
     shutil.copyfile(dailyImage["Image"], dst + "/Default.jpg")
 
-    file_object.write('\n\nApp successfully ran ...')
+    file_object.write('\nApp successfully ran ...')
     # Close the file
     file_object.close()
     
