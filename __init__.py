@@ -20,34 +20,36 @@ def get_random_image(src):
 def is_daytime():
     time = datetime.now()
     hour = time.hour
-    return hour < 14
+    return hour < 15
 
-def get_significant_event():
-    #Search for events (Birthdays, Holidays) and provide cool pictures for them! 
-    return False
+def get_image_directory():
+    # Search for events (Birthdays, Holidays) and provide cool pictures for them! 
+    # Get the time of day, and determine whether or not the night varient should be used.
+    daytime = is_daytime()
+
+    if daytime:
+        src = "./Images"
+    else:
+        src = "./ImagesNight"
+
+    return src
 
 def strip_image_name(image):
     return False
 
 # Find a way to effectively run this function on startup of the Laptop, or per-day.
 if __name__ == "__main__":
-    # Get the time of day, and determine whether or not the night varient should be used.
-    daytime = is_daytime()
     
-    if daytime:
-        src = "./Images"
-    else:
-        src = "./ImagesNight"
-
+    src = get_image_directory()
     dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
 
     dailyImage = get_random_image(src)
     
     file_object = open('Logs.txt', 'a')
+    file_object.write('\n\nApp running ...')
     file_object.write('\nCurrently grinding in ... ' + dailyImage["Image"])
 
-    # Close the file
-    file_object.close()
+    
 
     # Check if we already have a Default Image. 
     path = exists(dst + "/Default.jpg")
@@ -57,5 +59,9 @@ if __name__ == "__main__":
 
     # Copy over the new background files.
     shutil.copyfile(dailyImage["Image"], dst + "/Default.jpg")
+
+    file_object.write('\n\nApp successfully ran ...')
+    # Close the file
+    file_object.close()
     
     
