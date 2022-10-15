@@ -1,3 +1,5 @@
+#!./venv/bin/python
+
 from genericpath import exists
 import os
 import random
@@ -18,7 +20,7 @@ def get_random_image(src):
 def is_daytime():
     time = datetime.now()
     hour = time.hour
-    return hour < 18
+    return hour < 14
     
 
 def strip_image_name(image):
