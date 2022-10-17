@@ -69,12 +69,13 @@ while true
 do
 	if [ $(date +%H) -lt 15 ];
 	then
-		osascript -e 'tell app "Microsoft Teams" to display dialog "Theme changed to Morning!"'
 		while [ $(date +%H:%M) != "15:01" ]; do sleep 1; done
+		osascript -e 'tell app "Microsoft Teams" to display dialog "Theme changed to Night!"'
 		python __init.py__
 	fi
+
     while [ $(date +%H:%M) != "08:01" ]; do sleep 1; done
-	osascript -e 'tell app "Microsoft Teams" to display dialog "Theme changed to Night!"'
+	osascript -e 'tell app "Microsoft Teams" to display dialog "Theme changed to Morning!"'
 	python __init.py__
 done
 </string>
@@ -190,7 +191,7 @@ done
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>529.000000:628.000000</string>
+				<string>529.000000:708.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
