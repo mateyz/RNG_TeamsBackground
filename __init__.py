@@ -39,6 +39,8 @@ def strip_image_name(image):
 
 # Find a way to effectively run this function on startup of the Laptop, or per-day.
 if __name__ == "__main__":
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
     
     src = get_image_directory()
     dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
@@ -46,7 +48,7 @@ if __name__ == "__main__":
     dailyImage = get_random_image(src)
     
     file_object = open('Logs.txt', 'a')
-    file_object.write('\n\nApp running ...')
+    file_object.write('\n\nApp running | ' + current_time)
     file_object.write('\nCurrently grinding in ... ' + dailyImage["Image"])
 
     # Check if we already have a Default Image. 
