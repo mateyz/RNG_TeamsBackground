@@ -49,8 +49,6 @@ if __name__ == "__main__":
     file_object.write('\n\nApp running ...')
     file_object.write('\nCurrently grinding in ... ' + dailyImage["Image"])
 
-    
-
     # Check if we already have a Default Image. 
     path = exists(dst + "/Default.jpg")
     if path:
