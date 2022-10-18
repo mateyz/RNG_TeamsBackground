@@ -59,53 +59,55 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>cd
+					<string>#!/bin/bash/
+cd
 cd Documents
 cd GitHub
 cd RNG_TeamsBackground
 
 # Initial bootstrap
-if [ $(date +%H) -lt 11 ];
+if [ $(date +%H) -lt 14 ];
 then
 	isMorning=true;
 else
 	isMorning=false;
 fi
 python __init__.py
-
+echo "Bootstrap began ..."
 
 while true
 do
 	sleep 5;
 	# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Running checks ..."'
 	if [ $(date +%H) -lt 14 ];
-	# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] -lt 11 ..."'
+	# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] -lt 15 ..."'
 	then
 		if [ "$isMorning" = false ];
 		then
-			osascript -e 'tell app "Microsoft Teams" to display dialog "Set to Morning!"'
+		# 	osascript -e 'tell app "Microsoft Teams" to display dialog "Set to Morning!"'
+			echo "Set to Morning!"
 			isMorning=true;
 			python __init__.py
 		else
-			# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Already set to Morning!"'
-			sleep 600;
+		# 	osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Already set to Morning!"'
+            echo "Already set to Morning!"
+			sleep 60;
 		fi
-
-	elif [ $(date +%H) -mt 14 ];
+	elif [ $(date +%H) -ge 14 ];
 	then
 		if [ "$isMorning" = true ];
 		then
-			osascript -e 'tell app "Microsoft Teams" to display dialog "Set to Night!"'
+		# 	osascript -e 'tell app "Microsoft Teams" to display dialog "Set to Night!"'
+            echo "Set to Night!"
 			isMorning=false;
 			python __init__.py
 		else
-			# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Already set to Night!"'
-			sleep 600;
+		# 	osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Already set to Night!"'
+            echo "Already set to Night!"
+			sleep 60;
 		fi
 	fi
-done
-
-	</string>
+done</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -218,7 +220,7 @@ done
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>529.000000:622.000000</string>
+				<string>529.000000:563.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
