@@ -62,3 +62,27 @@ Currently grinding in ... ./Images/Lordaron.jpg
 
 App running | 13:11:26
 Currently grinding in ... ./Images/Orgrimmar.jpg
+
+App running | 14:23:25
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 14:35:54
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 14:37:24
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 14:48:05
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 15:01:30
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 16:31:31
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 16:32:07
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
+
+App running | 17:00:23
+Currently grinding in ... ./ImagesNight/Ardenwald.jpg
