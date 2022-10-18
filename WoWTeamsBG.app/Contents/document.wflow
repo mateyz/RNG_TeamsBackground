@@ -64,21 +64,48 @@ cd Documents
 cd GitHub
 cd RNG_TeamsBackground
 
+# Initial bootstrap
+if [ $(date +%H) -lt 11 ];
+then
+	isMorning=true;
+else
+	isMorning=false;
+fi
+python __init__.py
+
 
 while true
 do
-	if [ $(date +%H) -lt 15 ];
+	sleep 5;
+	# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Running checks ..."'
+	if [ $(date +%H) -lt 14 ];
+	# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] -lt 11 ..."'
 	then
-		while [ $(date +%H:%M) != "15:01" ]; do sleep 1; done
-		osascript -e 'tell app "Microsoft Teams" to display dialog "Theme changed to Night!"'
-		python __init.py__
-	fi
+		if [ "$isMorning" = false ];
+		then
+			osascript -e 'tell app "Microsoft Teams" to display dialog "Set to Morning!"'
+			isMorning=true;
+			python __init__.py
+		else
+			# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Already set to Morning!"'
+			sleep 600;
+		fi
 
-    while [ $(date +%H:%M) != "08:01" ]; do sleep 1; done
-	osascript -e 'tell app "Microsoft Teams" to display dialog "Theme changed to Morning!"'
-	python __init.py__
+	elif [ $(date +%H) -mt 14 ];
+	then
+		if [ "$isMorning" = true ];
+		then
+			osascript -e 'tell app "Microsoft Teams" to display dialog "Set to Night!"'
+			isMorning=false;
+			python __init__.py
+		else
+			# osascript -e 'tell app "Microsoft Teams" to display dialog "[Debug] Already set to Night!"'
+			sleep 600;
+		fi
+	fi
 done
-</string>
+
+	</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
 					<key>inputMethod</key>
@@ -191,7 +218,7 @@ done
 				<key>isViewVisible</key>
 				<integer>1</integer>
 				<key>location</key>
-				<string>529.000000:708.000000</string>
+				<string>529.000000:622.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

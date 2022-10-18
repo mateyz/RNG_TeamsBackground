@@ -20,7 +20,7 @@ def get_random_image(src):
 def is_daytime():
     time = datetime.now()
     hour = time.hour
-    return hour < 15
+    return hour < 14
 
 def get_image_directory():
     # Search for events (Birthdays, Holidays) and provide cool pictures for them! 
@@ -59,8 +59,7 @@ if __name__ == "__main__":
 
     # Copy over the new background files.
     shutil.copyfile(dailyImage["Image"], dst + "/Default.jpg")
-
-    file_object.write('\nApp successfully ran ...')
+    
     # Close the file
     file_object.close()
     

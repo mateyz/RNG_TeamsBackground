@@ -1,0 +1,64 @@
+
+
+App running | 09:34:00
+Currently grinding in ... ./Images/Orgrimmar.jpg
+
+App running | 10:06:52
+Currently grinding in ... ./Images/Default.jpg
+
+App running | 10:10:15
+Currently grinding in ... ./Images/Shattrath.jpg
+
+App running | 10:17:16
+Currently grinding in ... ./Images/Shattrath.jpg
+
+App running | 10:17:29
+Currently grinding in ... ./Images/Default.jpg
+
+App running | 10:20:28
+Currently grinding in ... ./Images/TheDreamGrove.jpg
+
+App running | 11:37:27
+Currently grinding in ... ./Images/Shattrath.jpg
+
+App running | 11:37:55
+Currently grinding in ... ./Images/TheDreamGrove.jpg
+
+App running | 11:38:09
+Currently grinding in ... ./Images/Shattrath.jpg
+
+App running | 11:38:27
+Currently grinding in ... ./Images/Orgrimmar.jpg
+
+App running | 11:38:36
+Currently grinding in ... ./Images/Default.jpg
+
+App running | 11:39:02
+Currently grinding in ... ./Images/Default.jpg
+
+App running | 11:39:34
+Currently grinding in ... ./Images/Shattrath.jpg
+
+App running | 11:40:26
+Currently grinding in ... ./Images/Shattrath.jpg
+
+App running | 11:42:50
+Currently grinding in ... ./Images/Orgrimmar.jpg
+
+App running | 13:04:23
+Currently grinding in ... ./Images/Lordaron.jpg
+
+App running | 13:04:35
+Currently grinding in ... ./Images/Lordaron.jpg
+
+App running | 13:07:26
+Currently grinding in ... ./Images/Lordaron.jpg
+
+App running | 13:07:34
+Currently grinding in ... ./Images/Orgrimmar.jpg
+
+App running | 13:11:18
+Currently grinding in ... ./Images/Lordaron.jpg
+
+App running | 13:11:26
+Currently grinding in ... ./Images/Orgrimmar.jpg
