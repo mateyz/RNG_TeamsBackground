@@ -27,6 +27,7 @@ def get_image_directory():
     # Get the time of day, and determine whether or not the night varient should be used.
     daytime = is_daytime()
 
+
     if daytime:
         src = "./Images"
     else:
