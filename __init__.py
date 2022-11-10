@@ -29,9 +29,9 @@ def get_image_directory():
     daytime = is_daytime()
 
     if daytime:
-        src = "./Images"
+        src = "./Images/Day"
     else:
-        src = "./ImagesNight"
+        src = "./Images/Night"
 
     return src
 
