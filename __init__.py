@@ -43,7 +43,8 @@ if __name__ == "__main__":
     current_time = now.strftime("%H:%M:%S")
     
     src = get_image_directory()
-    dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
+    dst = os.path.expanduser('~') + "/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
+    # dst = "/Users/christopherhutchings/Library/Application Support/Microsoft/Teams/Backgrounds/Uploads"
 
     dailyImage = get_random_image(src)
     
