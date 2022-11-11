@@ -8,8 +8,8 @@ Upcoming features I'd like to add to the WoW Backgrounds changer.
 - [ ] Have the Camera automatically turn on and off in Teams when a background is changed
 
 ### In Progress
+- [ ] Have the program search for a Night varient of your current day, before randomizing it. 
 
-- NA 
 
 ### Done ✓
 
