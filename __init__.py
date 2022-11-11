@@ -21,7 +21,7 @@ def get_random_image(src):
 def is_daytime():
     time = datetime.now()
     hour = time.hour
-    return hour < 14
+    return hour < 16
 
 def get_image_directory():
     # Search for events (Birthdays, Holidays) and provide cool pictures for them! 
@@ -40,6 +40,19 @@ def strip_image_name(image):
 
 # Find a way to effectively run this function on startup of the Laptop, or per-day.
 if __name__ == "__main__":
+    lastTimeRan = "..."
+    lastSceneRan = "..."
+
+    # Identify the previous
+    fp = open("./CurrentScene.txt")
+    for i, line in enumerate(fp):
+        if i == 0:
+            lastTimeRan = line.replace("\n", "")
+        elif i == 1:
+            lastSceneRan = line
+    print(lastTimeRan)
+
+    sys.exit()
     now = datetime.now()
     current_time = now.strftime("%H:%M:%S")
     
